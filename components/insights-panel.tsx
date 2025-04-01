@@ -136,7 +136,7 @@ export default function InsightsPanel({ date }: InsightsPanelProps) {
   if (!data.length) return <ErrorMessage message="No data available for the selected date" />
 
   return (
-    <Card className="w-full mt-8 text-white border-gray-700 shadow-2xl">
+    <Card className="w-full mt-8 text-white shadow-2xl">
       <CardHeader className="border-b border-gray-700 pb-4 bg-gray-800 text-white ">
         <div className="flex items-center space-x-4">
           <BoltIcon className="w-8 h-8 text-blue-400" />
@@ -172,23 +172,23 @@ export default function InsightsPanel({ date }: InsightsPanelProps) {
                   <BoltIcon className="w-6 h-6 text-blue-400 mr-3" />
                   <h3 className="text-lg font-semibold text-black dark:text-white">Total Daily Demand</h3>
                 </div>
-                <span className="text-3xl font-bold text-black"><p className="dark:text-white">{getTotalDailyDemand()}</p> <span className="text-xl text-gray-400">MWh</span></span>
+                <span className="text-3xl font-bold text-black"><p className="dark:text-white sm:text-md">{getTotalDailyDemand()}</p> <span className="text-xl text-gray-400 sm:text-md">MWh</span></span>
               </div>
               <div className="p-6 rounded-lg shadow-md border border-gray-300">
                 <div className="flex items-center mb-4">
                   <CloudIcon className="w-6 h-6 text-blue-400 mr-3" />
                   <h3 className="text-lg font-semibold text-black dark:text-white">Peak Demand</h3>
                 </div>
-                <span className="text-3xl font-bold text-black dark:text-white">{getPeakDemand().demand} <span className="text-xl text-gray-400">MWh</span></span>
-                <p className="text-sm text-gray-500">at {getPeakDemand().hour}:00</p>
+                <span className="text-3xl font-bold text-black dark:text-white sm:text-md">{getPeakDemand().demand} <span className="text-xl text-gray-400 sm:text-md">MWh</span></span>
+                <p className="text-sm text-gray-500 sm:text-md">at {getPeakDemand().hour}:00</p>
               </div>
               <div className=" p-6 rounded-lg shadow-md border border-gray-300">
                 <div className="flex items-center mb-4 dark:text-white">
                   <ClockIcon className="w-6 h-6 text-blue-400 mr-3" />
                   <h3 className="text-lg font-semibold text-black dark:text-white">Off-Peak Demand</h3>
                 </div>
-                <p className="text-3xl font-bold text-black dark:text-white">{getOffPeakDemand().demand} <span className="text-xl text-gray-400">MWh</span></p>
-                <p className="text-sm text-gray-500">at {getOffPeakDemand().hour}:00</p>
+                <p className="text-3xl font-bold text-black dark:text-white sm:text-md">{getOffPeakDemand().demand} <span className="text-xl text-gray-400 sm:text-md">MWh</span></p>
+                <p className="text-sm text-gray-500 sm:text-md">at {getOffPeakDemand().hour}:00</p>
               </div>
             </div>
           </TabsContent>
