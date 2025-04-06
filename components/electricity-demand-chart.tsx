@@ -163,11 +163,11 @@ export default function ElectricityDemandChart({
           </div>
           <div className="flex space-x-4">
             <div className="bg-slate-500 p-3 rounded-lg">
-              <p className="text-xs text-blue-100">Total Demand</p>
+              <p className="text-xs text-blue-100">Last Hour Demand</p>
               <p className="text-lg font-bold">{totalDemand.toFixed(2)} MW</p>
             </div>
             <div className="bg-slate-500 p-3 rounded-lg">
-              <p className="text-xs text-blue-100">Peak Demand</p>
+              <p className="text-xs text-blue-100">Last Hour Peak Demand</p>
               <p className="text-lg font-bold">{peakDemand.toFixed(2)} MW</p>
             </div>
           </div>
